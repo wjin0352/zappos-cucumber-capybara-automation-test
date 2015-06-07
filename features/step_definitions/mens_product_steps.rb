@@ -1,34 +1,14 @@
-
-## Given
-Given /^a user visits the ([\w+])$/ do |page|
-  visit('/zappos')
+Given(/^a user visits the Home Page$/) do
+  visit('/')
 end
 
-And /^a user clicks on ([\w+])$/ do |product|
-  expect()
+When(/^a user clicks on (#{ITEM}) under a (#{SHOP_TYPE})$/) do |item, shop_type|
+  click_link(item, href: href_maker(shop_type, item))
 end
 
-And /^selects shop men\'?s$/ do 
-  expect()
+Then(/^the user should be sent to the (#{SHOP_TYPE})$/) do |shop_type|
+  expect(page).to have_content(shop_type)
 end
-
-## When 
-
-
-
-## Then
-Then /^the user should see men\'?s\-sandal page$/ do
-
-end
-
-Then /^the user should see men\'?s Shop page$/ do
-end
-
-
-
-
-
-
 
 
 

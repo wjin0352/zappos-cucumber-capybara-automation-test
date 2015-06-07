@@ -1,10 +1,18 @@
 Feature: Select a section and item
-  A user will select under the Men's section
-  some Product.
+  In order to view an item under a shop type 
+  As a user
+  I want to be able to click on an item that takes me to that page
 
-  Scenario: A user selects a Men's Product
-    Given a user visits the home page
-    And a user clicks on men's sandal
-    Then the user should see mens-sandal page
-    
-  Scenario:  
+  Background: 
+  	Given a user visits the Home Page
+
+  @javascript
+  Scenario Outline: User selects a Shop Type and Item
+    When a user clicks on <Item> under a <Shop_Type>
+    Then the user should be sent to the <Shop_Type> Page
+
+  Examples:
+    | Shop_Type    | Item        | 
+    | SHOP MEN'S   | Sandals     | 
+    | SHOP WOMEN'S | Shoes       |
+    | SHOP KIDS'   | Boys' Shoes |
