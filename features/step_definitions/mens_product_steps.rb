@@ -1,3 +1,4 @@
+
 ## Given
 Given /^a user visits the ([\w+])$/ do |page|
   visit('/zappos')
