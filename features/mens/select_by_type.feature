@@ -1,7 +1,7 @@
-Feature: Select a section 
-  In order to view an item under a shop type 
+Feature: Select a Section Type
+  In order to view a section type
   As a user
-  I want to be able to click on an item that takes me to that page  	
+  I want to be able to click on a section type that takes me to that page  	
 
   Scenario Outline: User selects a Shop Type
   	Given a user visits the Home Page
