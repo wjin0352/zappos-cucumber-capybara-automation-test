@@ -6,11 +6,14 @@ Feature: Select an Item
   
   Scenario Outline: User selects mens sandals
     Given a user visits the Home Page
-    When a user selects <item> under <shop_type>
-    Then the user is sent to <item> page:
+    And a user selects <item> under <shop_type>
+    Then the user is sent to <item> page
+    And the user selects <brand> on side menu
+    When the user selects <model> on screen
+
       Examples:
-      | item      |  shop_type     |
-      | Sandals   |  Shop Men's    |
+| item      |  shop_type     | brand                     | model          | color| 
+| Sandals   |  Shop Men's    | New Balance - (27 Items)  | Heritage Thong | navy |
       
   
 

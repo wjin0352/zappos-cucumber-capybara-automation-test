@@ -29,7 +29,31 @@ module MyHelpers
     class_name
   end
 
+  def href_shoe_helper(name, color, brand)
+    href = "/"
+    kicks = brand.split(' ')
+    kicks << name.split(' ')
+    kicks << color.split(' ')
+    href += kicks.join('-').downcase
+  end
+
 
 end
 
 World(MyHelpers)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
