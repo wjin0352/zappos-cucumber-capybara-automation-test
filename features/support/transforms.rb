@@ -5,3 +5,7 @@ end
 ITEM = Transform /^(.+)$/ do |item|
   item
 end
+
+REGULAR_SHOP_TYPE = Transform /^.*$/ do |reg_shop_type|
+  reg_shop_type
+end
