@@ -13,12 +13,11 @@ Feature: Select an Item
     Then user is sent to <model> page
     When user selects Add to Cart without selecting size/width
     Then user should see <size_message> appear on page
-
-
-
+    And user selects Don't see your size? link above add to cart button
+    Then user fills out form with <email>, <form_color>, and <size> 
   Examples:
-    | item      |  shop_type     | brand                     | model          | color| size_message |
-    | Sandals   |  Shop Men's    | New Balance - (26 Items)  | Heritage Thong | navy | Please select a size |
+    | item   | shop_type  | brand                    | model          | color| size_message | email | size | form_color |
+    | Sandals| Shop Men's | New Balance -  | Heritage Thong | navy | Please select a size | w@gmail.com | 7 | Navy|
       
   
 

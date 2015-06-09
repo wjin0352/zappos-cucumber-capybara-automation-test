@@ -35,8 +35,20 @@ Then(/^user should see (.+) appear on page$/) do |size_message|
   expect(page).to have_content(size_message)
 end
 
+And(/^user selects (.+) link above add to cart button$/) do |error_link|
+  click_link(error_link)
+end
 
 
+Then(/^user fills out form with (#{EMAIL}), (#{FORM_COLOR}), and (#{SIZE})$/) do |email, form_color, size|
+  new_window	= windows.last
+	page.within_window new_window do 
+	  fill_in('Your Email:', with: email )
+	  select(form_color, from: 'styleId')
+	  select(size, from: 'dimensionValueIds')
+	  click_button("Notify Me!")
+	end
+end
 
 
 

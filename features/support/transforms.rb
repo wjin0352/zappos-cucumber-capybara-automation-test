@@ -26,8 +26,17 @@ BRAND_NAME = Transform /^(.+)$/ do |item|
   item
 end
 
+SIZE = Transform /^(.+)$/ do |item|
+  item
+end
 
+EMAIL = Transform /^(.+)$/ do |item|
+  item
+end
 
+FORM_COLOR = Transform /^(.+)$/ do |item|
+  item
+end
 
 
 
