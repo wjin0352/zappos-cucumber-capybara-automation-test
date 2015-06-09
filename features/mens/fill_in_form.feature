@@ -1,10 +1,9 @@
-Feature: Select an Item
-  In order to select an item
+Feature: Filling in form
+  In order to order your item
   As a user
-  I want to be able to click on an item and be sent to the page
-  But this feature deals with href addresses with added characters
-  
-  Scenario Outline: User selects mens sandals
+  I want to be able to find my size, color, and fill out a form to send
+
+  Scenario Outline: User fills in a form and sends 
     Given a user visits the Home Page
     And a user selects <item> under <shop_type>
     Then the user is sent to <item> page
