@@ -1,6 +1,6 @@
 require 'sinatra'
 
-get '/' do
+get '/zappos' do
   redirect "http://www.zappos.com"
 end
 

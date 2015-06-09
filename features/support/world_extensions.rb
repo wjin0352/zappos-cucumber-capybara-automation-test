@@ -6,7 +6,17 @@ module MyHelpers
     chunk.each do |piece|
       piece.delete!("'")
   	end
-      url += chunk[1].downcase + '-' + item.downcase 
+      url += chunk[1].downcase + '-' + item.downcase + '%7E4s' 
+  end
+
+  def reg_href_helper(reg_shop_type, item)
+    url = "/"
+    regex = (/.*/).to_s
+    chunk = reg_shop_type.split(' ')
+    chunk.each do |piece|
+      piece.delete!("'")
+    end
+      url += chunk[1].downcase + '-' + item.downcase
   end
 
 
@@ -19,7 +29,31 @@ module MyHelpers
     class_name
   end
 
+  def href_shoe_helper(name, color, brand)
+    href = "/"
+    kicks = brand.split(' ')
+    kicks << name.split(' ')
+    kicks << color.split(' ')
+    href += kicks.join('-').downcase
+  end
+
 
 end
 
 World(MyHelpers)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
