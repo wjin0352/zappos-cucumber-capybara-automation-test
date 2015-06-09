@@ -11,11 +11,14 @@ Feature: Select an Item
     And the user selects <brand> on side menu
     When the user selects <model> on screen
     Then user is sent to <model> page
+    When user selects Add to Cart without selecting size/width
+    Then user should see <size_message> appear on page
+
 
 
   Examples:
-    | item      |  shop_type     | brand                     | model          | color| 
-    | Sandals   |  Shop Men's    | New Balance - (26 Items)  | Heritage Thong | navy |
+    | item      |  shop_type     | brand                     | model          | color| size_message |
+    | Sandals   |  Shop Men's    | New Balance - (26 Items)  | Heritage Thong | navy | Please select a size |
       
   
 

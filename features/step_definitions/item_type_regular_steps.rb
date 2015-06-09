@@ -27,6 +27,14 @@ Then(/^user is sent to (#{MODEL}) page$/) do |model|
   expect(page).to have_content(model)  
 end
 
+When(/^user selects Add to Cart without selecting size\/width$/) do
+  click_button("Add to Cart")
+end
+
+Then(/^user should see (.+) appear on page$/) do |size_message|
+  expect(page).to have_content(size_message)
+end
+
 
 
 
