@@ -10,10 +10,12 @@ Feature: Select an Item
     Then the user is sent to <item> page
     And the user selects <brand> on side menu
     When the user selects <model> on screen
+    Then user is sent to <model> page
 
-      Examples:
-| item      |  shop_type     | brand                     | model          | color| 
-| Sandals   |  Shop Men's    | New Balance - (27 Items)  | Heritage Thong | navy |
+
+  Examples:
+    | item      |  shop_type     | brand                     | model          | color| 
+    | Sandals   |  Shop Men's    | New Balance - (26 Items)  | Heritage Thong | navy |
       
   
 

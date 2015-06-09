@@ -17,11 +17,15 @@ And(/^the user selects (#{BRAND}) on side menu$/) do |brand|
   end
 end
 
-When(/^the user selects Heritage Thong on screen$/) do 
-    # click_link("Heritage Thong")
-    first(:link, "Heritage Thong").click
+When(/^the user selects (#{MODEL}) on screen$/) do |model|
+    # first(:link, model).click
+    click_link(model, match: :first)
+    # first(:link, "Heritage Thong").click
   end
 
+Then(/^user is sent to (#{MODEL}) page$/) do |model|
+  expect(page).to have_content(model)  
+end
 
 
 
